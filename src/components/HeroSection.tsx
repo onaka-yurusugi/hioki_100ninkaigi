@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from '../styles/HeroSection.module.css'
 
 export default function HeroSection() {
@@ -13,7 +12,7 @@ export default function HeroSection() {
       }}
     >
       <div className={styles.heroContent}>
-        <Image
+        <img
           src="/_411263185-907719224399025-7497585286919406642-n-10.png"
           alt="日置市100人カイギ ロゴ"
           width={200}

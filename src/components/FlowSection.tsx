@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from '../styles/FlowSection.module.css'
 
 export default function FlowSection() {
@@ -12,7 +11,7 @@ export default function FlowSection() {
             5名のゲストに、お一人10分でご自身の自己紹介や活動に込めた想い、これから描く未来についてお話いただく。
           </p>
         </div>
-        <Image
+        <img
           src="/line-album-20240317-240701-1-10.png"
           alt="ゲストトークの様子"
           width={400}
@@ -27,7 +26,7 @@ export default function FlowSection() {
             ゲストと参加者、そして参加者同士が交流を深め、繋がり合う。
           </p>
         </div>
-        <Image
+        <img
           src="/line-album-20240519-240701-1-10.png"
           alt="交流会の様子"
           width={400}

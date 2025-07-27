@@ -1,11 +1,10 @@
-import Image from 'next/image'
 import styles from '../styles/FutureSection.module.css'
 
 export default function FutureSection() {
   return (
     <section className={styles.futureSection}>
       <h2>描きたい未来</h2>
-      <Image
+      <img
         src="/image-60.png"
         alt="描きたい未来 イメージ"
         width={600}

@@ -1,21 +1,23 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/MemberSection.module.css'
 
 export default function MemberSection() {
   return (
-    <section className={styles.memberSection}>
-      <Image
-        src="/image-70.png"
-        alt="メンバーセクション背景"
-        fill
-        className={styles.bgImage}
-      />
+    <section 
+      className={styles.memberSection}
+      style={{
+        backgroundImage: 'url(/image-70.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <h2 className={styles.memberTitle}>MEMBER</h2>
       <h3 className={styles.memberSubtitle}>イベントを支える火起きしメンバー</h3>
       <div className={styles.memberGrid}>
         <div className={styles.memberCard}>
-          <Image
+          <img
             src="/image-90.png"
             alt="メンバー写真"
             width={170}
@@ -28,7 +30,7 @@ export default function MemberSection() {
           </Link>
         </div>
         <div className={styles.memberCard}>
-          <Image
+          <img
             src="/image-80.png"
             alt="メンバー写真"
             width={170}
@@ -41,7 +43,7 @@ export default function MemberSection() {
           </Link>
         </div>
         <div className={styles.memberCard}>
-          <Image
+          <img
             src="/image-130.png"
             alt="メンバー写真"
             width={170}
@@ -54,7 +56,7 @@ export default function MemberSection() {
           </Link>
         </div>
         <div className={styles.memberCard}>
-          <Image
+          <img
             src="/line-album-20240303-240701-1-10.png"
             alt="メンバー写真"
             width={170}
@@ -67,7 +69,7 @@ export default function MemberSection() {
           </Link>
         </div>
         <div className={styles.memberCard}>
-          <Image
+          <img
             src="/image-140.png"
             alt="メンバー写真"
             width={170}

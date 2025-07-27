@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from '../styles/AboutSection.module.css'
 
 export default function AboutSection() {
@@ -21,7 +20,7 @@ export default function AboutSection() {
             100人100様の生き方に触れることで、いつもの景色が少し違って見えてきます。
           </p>
         </div>
-        <Image
+        <img
           src="/_415547186-381840384399131-3677425236492568567-n-10.png"
           alt="100人カイギ ロゴ 2"
           width={200}
