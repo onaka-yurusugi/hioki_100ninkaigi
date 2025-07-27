@@ -4,67 +4,95 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-この日置市100人カイギ（ひおきし100にんかいぎ）プロジェクトは、日置市に関わる面白い活動をしている人々を紹介し、緩やかなコミュニティ形成を目指す静的ウェブサイトです。
+この日置市100人カイギ（ひおきし100にんかいぎ）プロジェクトは、日置市に関わる面白い活動をしている人々を紹介し、緩やかなコミュニティ形成を目指すNext.jsアプリケーションです。
 
 ## Architecture
 
-このプロジェクトは純粋なHTML/CSSの静的サイトです：
+このプロジェクトはNext.js 14 (App Router) + TypeScriptで構築されています：
 
-- **web/index.html**: メインのHTMLファイル - サイトの全コンテンツが含まれています
-- **web/css/style.css**: CSSスタイルシート - レスポンシブデザインとビジュアルスタイリング
-- **web/images/**: 画像アセット - ゲストプロフィール写真、ロゴ、背景画像など
-
-## Key Features
-
-- **ヒーローセクション**: 日置市100人カイギのロゴとタイトル
-- **イントロセクション**: 背景説明と最新情報へのリンク
-- **100人カイギについて**: コンセプトの説明
-- **目指す場のあり方**: 3つの主要目標（刺激・宣言・応援）
-- **ゲスト100セクション**: 過去の登壇者のプロフィールグリッド
-- **イベントの流れ**: 2部構成の説明
-- **メンバーセクション**: 運営チームの紹介
-- **フッター**: お問い合わせ情報
+- **src/app/**: Next.js App Router構造
+  - `layout.tsx`: ルートレイアウト（メタデータ、フォント設定）
+  - `page.tsx`: メインページコンポーネント
+- **src/components/**: Reactコンポーネント
+  - 各セクション用のコンポーネント（HeroSection, IntroSection など）
+  - 再利用可能なコンポーネント（GuestCard）
+- **src/styles/**: CSSモジュール
+  - `globals.css`: グローバルスタイル、CSS変数、リセットCSS
+  - `*.module.css`: 各コンポーネント専用のスタイル
+- **src/data/**: TypeScript型定義とデータ
+  - `guests.ts`: ゲスト情報の型定義と配列データ
+- **public/**: 静的アセット（画像ファイル）
 
 ## Development Commands
 
-このプロジェクトはNode.js環境を使用していないため、特別なビルドコマンドは必要ありません。
-
-### ローカル開発
 ```bash
-# Pythonの簡易サーバーを使用
-python -m http.server 8000 -d web
+# 依存関係のインストール
+npm install
 
-# または、任意のHTTPサーバーツールを使用
-# 例: Live Server VS Code拡張機能
+# 開発サーバー起動
+npm run dev
+
+# 本番ビルド
+npm run build
+
+# 本番サーバー起動
+npm start
+
+# リント実行
+npm run lint
+
+# TypeScript型チェック
+npm run type-check
 ```
 
-### デプロイ
-web/フォルダの内容を静的ホスティングサービス（Netlify、Vercel、GitHub Pagesなど）にアップロードします。
+## Key Features
+
+- **App Router**: Next.js 14の最新App Router使用
+- **TypeScript**: 型安全性の確保
+- **CSS Modules**: コンポーネントスコープのスタイリング
+- **Static Export**: 静的サイト生成設定（next.config.js）
+- **Image Optimization**: Next.js Imageコンポーネント使用
+- **レスポンシブデザイン**: モバイルファーストアプローチ
+
+## Component Structure
+
+- **HeroSection**: 日置市100人カイギのロゴとタイトル
+- **IntroSection**: 背景説明と最新情報へのリンク
+- **AboutSection**: 100人カイギのコンセプト説明
+- **PhilosophySection**: 3つの主要目標（刺激・宣言・応援）
+- **FutureSection**: 描きたい未来の説明
+- **FlowSection**: イベントの流れ（2部構成）
+- **GuestSection**: 過去の登壇者のプロフィールグリッド
+- **MemberSection**: 運営チームの紹介
+- **Footer**: お問い合わせ情報
 
 ## Styling Guidelines
 
-- **CSS変数**: `:root`で定義されたカラーパレットを使用
-- **フォント**: Noto Sans JP（本文）、Noto Serif JP（見出し）
-- **レスポンシブ**: モバイルファーストアプローチ
+- **CSS変数**: `src/styles/globals.css`の`:root`で定義
+- **フォント**: Google Fonts（Noto Sans JP、Noto Serif JP）
 - **カラーコード**:
   - プライマリ: #000 (黒)
   - セカンダリ: #fff (白)  
   - アクセント: #ffda74 (黄色)
   - テキスト: #434343 (グレー)
+- **CSS Modules**: コンポーネントレベルでスタイルを分離
 
-## Image Management
-
-画像は`web/images/`ディレクトリに格納されており、命名規則に従っています：
-- ゲスト写真: 数字ベース（_10.png, _11.png など）
-- メンバー写真: image-XX.png形式
-- 背景画像: 説明的な名前
-
-## Content Updates
+## Content Management
 
 ### ゲストの追加
-1. `web/images/`に新しいゲスト画像を追加
-2. `web/index.html`のguest-gridセクションに新しいguest-cardを追加
-3. ゲスト番号とプロフィール説明を更新
+1. `public/`に新しいゲスト画像を追加
+2. `src/data/guests.ts`のguests配列に新しいエントリを追加
+3. 必要に応じてGuest型定義を更新
 
-### スタイルの変更
-`web/css/style.css`のCSS変数を編集してカラーパレットを変更するか、既存のクラスを修正してレイアウトを調整します。
+### 新しいセクションの追加
+1. `src/components/`に新しいコンポーネントファイルを作成
+2. `src/styles/`に対応するCSSモジュールを作成
+3. `src/app/page.tsx`にコンポーネントをインポート・配置
+
+## Deployment
+
+静的エクスポート設定により、以下のコマンドで静的ファイルを生成：
+```bash
+npm run build
+```
+生成されるファイルは`out/`ディレクトリに出力され、任意の静的ホスティングサービスにデプロイ可能です。

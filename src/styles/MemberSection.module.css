@@ -1,0 +1,57 @@
+.memberSection {
+  position: relative;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.memberTitle {
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+}
+
+.memberSubtitle {
+  margin-bottom: 40px;
+}
+
+.memberGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.memberCard {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.memberImage {
+  width: 170px;
+  height: 195px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.memberCard p {
+  font-weight: bold;
+}
+
+.role {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}

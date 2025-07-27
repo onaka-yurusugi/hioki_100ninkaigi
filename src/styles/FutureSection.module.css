@@ -1,0 +1,17 @@
+.futureSection {
+  text-align: center;
+}
+
+.futureImage {
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.futureText {
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.8;
+}

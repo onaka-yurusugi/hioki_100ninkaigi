@@ -1,0 +1,33 @@
+.introSection {
+  text-align: center;
+  padding: 0 0 60px 0;
+}
+
+.introTextBlock {
+  background: url("/image-40.png") no-repeat center center/cover;
+  padding: 40px 20px;
+  border-radius: 0 0 22px 22px;
+  color: var(--secondary-color);
+}
+
+.introText {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  line-height: 2.2;
+}
+
+.catchphrase {
+  margin-bottom: 40px;
+  color: var(--secondary-color);
+}
+
+.introContact {
+  margin-top: 40px;
+}
+
+.contactText {
+  font-family: "Noto Serif JP", sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}

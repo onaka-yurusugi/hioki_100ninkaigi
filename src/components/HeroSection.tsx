@@ -1,0 +1,20 @@
+import Image from 'next/image'
+import styles from '../styles/HeroSection.module.css'
+
+export default function HeroSection() {
+  return (
+    <header className={styles.heroSection}>
+      <div className={styles.heroContent}>
+        <Image
+          src="/_411263185-907719224399025-7497585286919406642-n-10.png"
+          alt="日置市100人カイギ ロゴ"
+          width={200}
+          height={200}
+          className={styles.logo}
+        />
+        <h1 className={styles.title}>日置市100人カイギ</h1>
+        <p className={styles.subtitle}>火、起きし街。日置市。</p>
+      </div>
+    </header>
+  )
+}

@@ -1,0 +1,49 @@
+.guestCard {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  background-color: #fff;
+  aspect-ratio: 1 / 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.guestCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.guestNumber {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ccc;
+  font-family: "Noto Serif JP", sans-serif;
+}
+
+.guestImage {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.guestCard p {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--text-color);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.comingSoonPlaceholder {
+  visibility: hidden;
+}

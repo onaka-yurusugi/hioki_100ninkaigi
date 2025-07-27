@@ -1,0 +1,46 @@
+.flowSection {
+  text-align: center;
+}
+
+.flowItem {
+  margin-bottom: 40px;
+}
+
+.flowItem h3 {
+  text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.flowItem > div {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.flowImage {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .flowItem {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .flowItem:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .flowItem > div {
+    flex: 1;
+    text-align: left;
+  }
+  .flowImage {
+    width: 45%;
+    flex-shrink: 0;
+  }
+  .flowItem h3 {
+    font-size: 1.5rem;
+  }
+}
