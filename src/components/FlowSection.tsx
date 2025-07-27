@@ -12,7 +12,7 @@ export default function FlowSection() {
           </p>
         </div>
         <img
-          src="/line-album-20240317-240701-1-10.png"
+          src="/event-talk-01.png"
           alt="ゲストトークの様子"
           width={400}
           height={300}
@@ -27,7 +27,7 @@ export default function FlowSection() {
           </p>
         </div>
         <img
-          src="/line-album-20240519-240701-1-10.png"
+          src="/event-talk-02.png"
           alt="交流会の様子"
           width={400}
           height={300}

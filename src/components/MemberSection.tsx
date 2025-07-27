@@ -57,7 +57,7 @@ export default function MemberSection() {
         </div>
         <div className={styles.memberCard}>
           <img
-            src="/line-album-20240303-240701-1-10.png"
+            src="/member-photo-04.png"
             alt="メンバー写真"
             width={170}
             height={195}

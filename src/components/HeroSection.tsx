@@ -13,7 +13,7 @@ export default function HeroSection() {
     >
       <div className={styles.heroContent}>
         <img
-          src="/_411263185-907719224399025-7497585286919406642-n-10.png"
+          src="/logo-main.png"
           alt="日置市100人カイギ ロゴ"
           width={200}
           height={200}

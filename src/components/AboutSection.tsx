@@ -21,7 +21,7 @@ export default function AboutSection() {
           </p>
         </div>
         <img
-          src="/_415547186-381840384399131-3677425236492568567-n-10.png"
+          src="/logo-about.png"
           alt="100人カイギ ロゴ 2"
           width={200}
           height={200}

@@ -83,12 +83,12 @@ export const guests: Guest[] = [
   },
   {
     number: "016",
-    imageSrc: "/_432838444-1802686660196015-4507968444473477761-n-10.png",
+    imageSrc: "/guest-016.png",
     description: "Small is beautiful\n暮らしの選択肢をつくる"
   },
   {
     number: "017",
-    imageSrc: "/dda-748-ab-cea-9-4-bbe-9787-31461-a-2153-b-9-10.png",
+    imageSrc: "/guest-017.png",
     description: "\"福祉施設\"からはじまった、\n唯一無二の\n地域活性プロジェクト"
   },
   {
