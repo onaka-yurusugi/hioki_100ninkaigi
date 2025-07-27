@@ -4,7 +4,6 @@
 }
 
 .introTextBlock {
-  background: url("/image-40.png") no-repeat center center/cover;
   padding: 40px 20px;
   border-radius: 0 0 22px 22px;
   color: var(--secondary-color);

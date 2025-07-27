@@ -4,7 +4,15 @@ import styles from '../styles/IntroSection.module.css'
 export default function IntroSection() {
   return (
     <section className={styles.introSection}>
-      <div className={styles.introTextBlock}>
+      <div 
+        className={styles.introTextBlock}
+        style={{
+          backgroundImage: 'url(/image-40.png)',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center center',
+          backgroundSize: 'cover'
+        }}
+      >
         <p className={styles.introText}>
           日置市は今、まさに変化の渦中にあります。
           <br /> <br />

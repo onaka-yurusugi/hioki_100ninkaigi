@@ -3,7 +3,15 @@ import styles from '../styles/HeroSection.module.css'
 
 export default function HeroSection() {
   return (
-    <header className={styles.heroSection}>
+    <header 
+      className={styles.heroSection}
+      style={{
+        backgroundImage: 'url(/image-10.png)',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover'
+      }}
+    >
       <div className={styles.heroContent}>
         <Image
           src="/_411263185-907719224399025-7497585286919406642-n-10.png"
