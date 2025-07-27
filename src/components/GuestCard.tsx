@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from '../styles/GuestCard.module.css'
 
 interface GuestCardProps {
@@ -15,7 +16,7 @@ export default function GuestCard({ number, imageSrc, description, isComingSoon 
   return (
     <div className={styles.guestCard}>
       <div className={styles.guestNumber}>{number}</div>
-      <img
+      <Image
         src={imageSrc}
         alt={`ゲスト写真 ${number}`}
         width={150}

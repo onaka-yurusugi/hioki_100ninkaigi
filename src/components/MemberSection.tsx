@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from '../styles/MemberSection.module.css'
 
 export default function MemberSection() {
@@ -17,7 +18,7 @@ export default function MemberSection() {
       <h3 className={styles.memberSubtitle}>イベントを支える火起きしメンバー</h3>
       <div className={styles.memberGrid}>
         <div className={styles.memberCard}>
-          <img
+          <Image
             src="/image-90.png"
             alt="メンバー写真"
             width={170}
@@ -30,7 +31,7 @@ export default function MemberSection() {
           </Link>
         </div>
         <div className={styles.memberCard}>
-          <img
+          <Image
             src="/image-80.png"
             alt="メンバー写真"
             width={170}
@@ -43,7 +44,7 @@ export default function MemberSection() {
           </Link>
         </div>
         <div className={styles.memberCard}>
-          <img
+          <Image
             src="/image-130.png"
             alt="メンバー写真"
             width={170}
@@ -56,7 +57,7 @@ export default function MemberSection() {
           </Link>
         </div>
         <div className={styles.memberCard}>
-          <img
+          <Image
             src="/member-photo-04.png"
             alt="メンバー写真"
             width={170}
@@ -69,7 +70,7 @@ export default function MemberSection() {
           </Link>
         </div>
         <div className={styles.memberCard}>
-          <img
+          <Image
             src="/image-140.png"
             alt="メンバー写真"
             width={170}
