@@ -2,6 +2,7 @@ export interface Guest {
   number: string
   imageSrc: string
   description: string
+  url?: string
   isComingSoon?: boolean
 }
 
@@ -9,7 +10,8 @@ export const guests: Guest[] = [
   {
     number: "001",
     imageSrc: "/mask-group1.svg",
-    description: "面白いプロジェクトが\nたくさん生まれる街へ"
+    description: "面白いプロジェクトが\nたくさん生まれる街へ",
+    url: "https://drive.google.com/file/d/1DXzJBSXCQ-cGOO-GKK9oRCi4POCUjeBG/view?usp=sharing"
   },
   {
     number: "002",

@@ -19,6 +19,7 @@ export default function GuestSection() {
             number={guest.number}
             imageSrc={guest.imageSrc}
             description={guest.description}
+            url={guest.url}
             isComingSoon={guest.isComingSoon}
           />
         ))}

@@ -36,6 +36,14 @@
   margin-bottom: 10px;
 }
 
+.guestImage.clickable {
+  transition: opacity 0.2s ease;
+}
+
+.guestImage.clickable:hover {
+  opacity: 0.8;
+}
+
 .guestCard p {
   font-size: 0.8rem;
   line-height: 1.4;

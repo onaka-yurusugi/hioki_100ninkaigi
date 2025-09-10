@@ -106,3 +106,5 @@ public
 # Temporary folders
 tmp/
 temp/
+
+src/data/ゲストプロフィール.xlsx
