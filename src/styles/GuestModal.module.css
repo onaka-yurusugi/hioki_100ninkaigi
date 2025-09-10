@@ -1,0 +1,177 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.closeButton:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.content {
+  padding: 32px;
+  overflow-y: auto;
+  max-height: calc(80vh - 64px);
+}
+
+.header {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+  align-items: flex-start;
+}
+
+.imageContainer {
+  flex-shrink: 0;
+}
+
+.imageContainer img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.headerText {
+  flex: 1;
+}
+
+.guestNumber {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.guestName {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #000;
+}
+
+.guestPosition {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.description {
+  font-size: 1rem;
+  color: #434343;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.profileSection {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 24px;
+}
+
+.profileSection h3 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: #000;
+}
+
+.profileText {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #434343;
+  margin: 0;
+}
+
+.snsSection {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.snsSection h4 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.snsText {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #434343;
+  margin: 0;
+  white-space: pre-line;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 95%;
+    max-height: 85vh;
+  }
+
+  .content {
+    padding: 24px 20px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .imageContainer img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .guestNumber {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .profileText {
+    font-size: 0.9rem;
+  }
+}
