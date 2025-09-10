@@ -7,17 +7,21 @@ interface GuestCardProps {
   number: string
   imageSrc: string
   description: string
+  profile?: string
   url?: string
   isComingSoon?: boolean
+  onClick?: () => void
 }
 
-export default function GuestCard({ number, imageSrc, description, url, isComingSoon = false }: GuestCardProps) {
+export default function GuestCard({ number, imageSrc, description, profile, url, isComingSoon = false, onClick }: GuestCardProps) {
   if (isComingSoon) {
     return <div className={`${styles.guestCard} ${styles.comingSoonPlaceholder}`}></div>
   }
 
   const handleClick = () => {
-    if (url) {
+    if (profile && onClick) {
+      onClick()
+    } else if (url) {
       window.open(url, '_blank', 'noopener,noreferrer')
     }
   }
@@ -30,9 +34,9 @@ export default function GuestCard({ number, imageSrc, description, url, isComing
         alt={`ゲスト写真 ${number}`}
         width={150}
         height={150}
-        className={`${styles.guestImage} ${url ? styles.clickable : ''}`}
+        className={`${styles.guestImage} ${(profile || url) ? styles.clickable : ''}`}
         onClick={handleClick}
-        style={{ cursor: url ? 'pointer' : 'default' }}
+        style={{ cursor: (profile || url) ? 'pointer' : 'default' }}
       />
       <p>{description}</p>
     </div>
